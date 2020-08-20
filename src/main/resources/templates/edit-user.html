@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      lang="en">
+      
+	<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>CRUDDemo</title>
+        <!--- <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+    </head>
+	<main role="main" class="pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 mx-auto">
+                    	<br>
+                        <h3>Edit User</h3>
+                        <!--  <form method="get" action="list-users">
+                            <input type="text" name="keyword" pattern="[A-Za-z0-9\s\-._~:\/?#\[\]@!$&'()*+,;=]*" />&nbsp;&nbsp;
+                            <input type="submit" value="Search" />
+                        </form>
+                        -->
+                        <form action="#" th:action="@{/save-user}" th:object="${user}" method="post">
+                        	<table id="list_table" class="table table-striped table-bordered dt-responsive display">
+                        		<tr class="d-none">             
+                                    <td colspan="2">
+                                        <input type="text" th:field="*{id}" readonly="readonly" hidden="hidden" />
+                                    </td>
+                                </tr>
+                                <tr>
+                        			<td class="align-middle">User First Name:</td>
+                                    <td class="align-middle">
+                                    <div th:classappend="${#fields.hasErrors('firstName')} ? 'input-icon right' : ''">
+                                            <input type="text" class="form-control" maxlength="50" th:field="*{firstName}" placeholder="Required"/>
+                                            <span th:if="${#fields.hasErrors('firstName')}" class="text-danger" th:errors="*{firstName}"></span>
+                                    </div>
+                        		</tr>
+                        		<tr>
+                        			<td class="align-middle">User Last Name:</td>
+                                    <td class="align-middle">
+                                    <div th:classappend="${#fields.hasErrors('lastName')} ? 'input-icon right' : ''">
+                                            <input type="text" class="form-control" maxlength="50" th:field="*{lastName}" placeholder="Required"/>
+                                            <span th:if="${#fields.hasErrors('lastName')}" class="text-danger" th:errors="*{lastName}"></span>
+                                    </div>
+                        		</tr>
+                        		<tr>
+                        			<td class="align-middle">User Email:</td>
+                                    <td class="align-middle">
+                                    <div th:classappend="${#fields.hasErrors('email')} ? 'input-icon right' : ''">
+                                            <input type="text" class="form-control"  maxlength="50" th:field="*{email}" placeholder="Required"/>
+                                            <span th:if="${#fields.hasErrors('email')}" class="text-danger" th:errors="*{email}"></span>
+                                    </div>
+                        		</tr>
+                        		<tr>
+                        			<td class="align-middle">User Phone:</td>
+                                    <td class="align-middle">
+                                    <div th:classappend="${#fields.hasErrors('phone')} ? 'input-icon right' : ''">
+                                            <input type="text" class="form-control"  maxlength="50" th:field="*{phone}" placeholder="Required"/>
+                                            <span th:if="${#fields.hasErrors('phone')}" class="text-danger" th:errors="*{phone}"></span>
+                                    </div>
+                        		</tr>
+                        		<tr>
+                                    <td colspan="2">
+                                        <button type="submit" class="btn btn-info">Save</button>
+                                    </td>
+                                </tr>
+                        	</table>
+                        	<a href="/list-users">Return to Contact List</a>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </main>
+</html>
