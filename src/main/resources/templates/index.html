@@ -12,22 +12,92 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+        
+        <style>
+			
+				
+			.border-top {
+  				border-top: 1px solid #e5e5e5;
+				}
+				
+			.border-bottom {
+  				border-bottom: 1px solid #e5e5e5;
+				}
+				
+			.box-shadow {
+  				box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+				}
+				
+			.img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 90%;
+				}	
+				
+			.byline{
+				font-size:x-small;
+				}
+				
+			footer {
+				  position: absolute;
+				  bottom: 0;
+				  width: 100%;
+				  height: 80px;
+				  background: #fafafa;
+				  border-top: solid 1px #eee;
+				}	
+		</style>
     </head>
+    
+   <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+   	<div class="container">
+   		<a class="navbar-brand" href="/"><i class="far fa-address-book"></i></a>
+   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        	<ul class="navbar-nav flex-grow-1">
+               <li class="nav-item">
+               		<a class="nav-link text-dark" href="/">Home</a>
+               </li>
+               <li class="nav-item">
+                 	<a class="nav-link text-dark" href="/admin">Admin</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link text-dark" href="/about">About</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link text-dark" href="/contact">Contact</a>
+               </li>
+           </ul>
+        </div>
+    </div>
+   </nav> 
+    
     <main role="main" class="pb-3">
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-9 mx-auto">
+    				<div class="d-flex align-items-center justify-content-center">
     				<br>
-    				<h3>Welcome to Jamal's Online Phone Book</h3>
-    				<br><br>
-    				<a href="/add-user">Add A New Contact</a>
-    				<br>
-    				<a href="/list-users">View Contacts</a>
-    				<br>
-    				<a href="/h2-console/">DB Console</a>
+    				<h1 class="display-4">Jamal Bourne Phone Book</h1>
+    				</div>
+    				<img class="img" th:src="@{/img/JBPB.png}"/>
+    				<div class="byline d-flex align-items-center justify-content-center">
+    					Photo By:<a href="https://www.flickr.com/photos/jamiesrabbits/4248396588">Jamie</a>
+    					
+    				</div>
     			</div>
     		</div>
     	</div>
+    	
     </main>
+    
+    <footer class="border-top footer-copyright text-center py-3">
+		<div class="container">
+	    	© 2020 - JBPB - <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a>
+	    </div>
+   	</footer>
 	
 </html>

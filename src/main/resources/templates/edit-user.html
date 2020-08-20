@@ -12,7 +12,55 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> --->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+        
+        <style type="text/css">
+        	.footer {
+  				position: absolute;
+  				bottom: 0;
+  				width: 100%;
+ 				white-space: nowrap;
+  				line-height: 60px; 
+				}
+				
+			.border-top {
+  				border-top: 1px solid #e5e5e5;
+				}
+				
+			.border-bottom {
+  				border-bottom: 1px solid #e5e5e5;
+				}
+				
+			.box-shadow {
+  				box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+				}
+        </style>
     </head>
+    
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+   	<div class="container">
+   		<a class="navbar-brand" href="/">JBPB</a>
+   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        	<ul class="navbar-nav flex-grow-1">
+               <li class="nav-item">
+               		<a class="nav-link text-dark" href="/">Home</a>
+               </li>
+               <li class="nav-item">
+                 	<a class="nav-link text-dark" href="/admin">Admin</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link text-dark" href="/about">About</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link text-dark" href="/contact">Contact</a>
+               </li>
+           </ul>
+        </div>
+    </div>
+   </nav> 
+    
 	<main role="main" class="pb-3">
             <div class="container">
                 <div class="row">
@@ -75,4 +123,10 @@
                 </div>
             </div>
         </main>
+        
+        <footer class="border-top footer text-muted">
+			<div class="container">
+		    	© 2020 - JBPB - <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a>
+		    </div>
+   		</footer>
 </html>

@@ -68,4 +68,14 @@ public class UserController {
         userService.deleteUser(id);
         return "redirect:/list-users";
     }
+	
+	@RequestMapping("/admin")
+    public String goToAdmin(Model model) {
+      return "admin";
+    }
+	
+	@RequestMapping("/about")
+    public String getAbout(Model model) {
+      return "about";
+    }
 }
